@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log-In Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -16,24 +19,24 @@
     </header>
 
     <main>
-        <section>
-            <div class="inner-container">
+        <div class="grid-container">
+            <div class="log-in">
                 <h2>Log In</h2>
                 <form action="#" method="post" name="login">
                     <div>
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" required>
+                        <label for="username">Username</label>
+                        <input id="username" type="text" name="username" required>
                     </div>
                     <div>
                         <label for="password">Password</label>
                         <input id="password" type="password" name="password" autocomplete="off" required>
                     </div>
-                    <div>
+                    <div class="submit">
                         <input type="submit" value="Sign In">
                     </div>
                 </form>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 </html>

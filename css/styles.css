@@ -1,0 +1,51 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    background: #b07cfb;
+    background: linear-gradient(180deg, #bd95f6 0%, #9464e0 85%);
+    color:#341763;
+}
+
+h1 a{
+    color:#341763;
+    text-decoration: none;
+}
+
+.log-in{
+    background-color: #ccb1f5;
+    border: 1px solid #9175bb;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form div label,
+form div input{
+    display: block;
+    width: 100%;
+}
+
+form div label{
+    font-weight: 700;
+}
+
+form div input{
+    line-height: 2rem;
+    border: 1px solid #341763;
+    border-radius: 3px;
+}
+
+.submit input {
+    background-color: #341763;
+    color:antiquewhite
+}
+
+.submit input:hover {
+    cursor: pointer;
+}
