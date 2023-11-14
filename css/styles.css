@@ -11,18 +11,27 @@ h1 a{
     text-decoration: none;
 }
 
+.grid-container {
+    height: 80dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .log-in{
     background-color: #ccb1f5;
     border: 1px solid #9175bb;
     padding: 1rem;
     border-radius: 10px;
-    max-width: 300px;
+    width: clamp(18.75rem, 16.1859rem + 12.8205vw, 23rem);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    animation: slide-in 1500ms;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 form div label,
@@ -33,19 +42,67 @@ form div input{
 
 form div label{
     font-weight: 700;
+    padding-bottom: 0.8rem;
 }
 
 form div input{
-    line-height: 2rem;
-    border: 1px solid #341763;
+    line-height: 2.5rem;
+    border: 1px solid #b07cfb;
     border-radius: 3px;
+    padding-left: 1rem;
 }
 
 .submit input {
-    background-color: #341763;
-    color:antiquewhite
+    background-color: #9175bb;
+    border: none;
+    color:antiquewhite;
 }
 
 .submit input:hover {
+    background-color: #9175bb;
+    transition: background-color 0.5s ease-out;
+    border: none;
+    color:antiquewhite;
+}
+
+.submit input:hover {
+    background-color: #341763;
     cursor: pointer;
+}
+
+.submit input:invalid {
+    animation: shake 200ms;
+    animation-iteration-count: 2;
+}
+
+.shake {
+    animation: shake 200ms;
+    animation-iteration-count: 2;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-85%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes shake {
+    0% {transform: translate(0%);}
+    10% {transform: translate(1px);}
+    20% {transform: translate(2px);}
+    40% {transform: translate(3px);}
+    60% {transform: translate(2px);}
+    80% {transform: translate(1px);}
+    100% {transform: translate(0px);}
+  }
+
+.error-msg {
+    color: red;
+    font-size: 14px;
 }

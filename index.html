@@ -10,11 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
         <div class="inner-container flex-container">
-            <h1><a href="#">Qter</a></h1>
+            <h1><a href="index.html">Qter</a></h1>
         </div>
     </header>
 
@@ -25,14 +26,16 @@
                 <form action="#" method="post" name="login">
                     <div>
                         <label for="username">Username</label>
-                        <input id="username" type="text" name="username" required>
+                        <input id="username" type="text" name="username">
+                        <div class="error-msg" role="alert"></div>
                     </div>
                     <div>
                         <label for="password">Password</label>
-                        <input id="password" type="password" name="password" autocomplete="off" required>
+                        <input id="password" type="password" name="password" autocomplete="off">
+                        <div class="error-msg" role="alert"></div>
                     </div>
                     <div class="submit">
-                        <input type="submit" value="Sign In">
+                        <input type="submit" id="loginSubmit" value="Sign In">
                     </div>
                 </form>
             </div>
